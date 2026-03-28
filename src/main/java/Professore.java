@@ -11,7 +11,7 @@ public class Professore extends Persona {
         return settore;
     }
 
-    public void presentaCorso() {
+    public void presenta() {
         System.out.println("Sono il professore " + getNomeCompleto() +
                 " del settore " + settore);
     }
