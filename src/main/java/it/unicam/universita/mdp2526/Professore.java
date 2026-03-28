@@ -1,3 +1,5 @@
+package it.unicam.universita.mdp2526;
+
 public class Professore {
 
     private String nome;
