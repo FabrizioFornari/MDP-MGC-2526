@@ -17,7 +17,7 @@ dependencies {
 }
 
 application {
-    mainClass.set("it.unicam.universita.mdp2526.Main")
+    mainClass.set("Main")
 }
 
 tasks.test {
