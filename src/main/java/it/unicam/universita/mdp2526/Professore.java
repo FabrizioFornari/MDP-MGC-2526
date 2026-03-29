@@ -6,11 +6,18 @@ public class Professore extends Persona {
 
     public Professore(String nome, String cognome, String settore) {
         super(nome, cognome);
-        this.settore = settore;
+        setSettore(settore);
     }
 
     public String getSettore() {
         return settore;
+    }
+
+    public void setSettore(String settore) {
+        if (settore == null || settore.isBlank()) {
+            throw new IllegalArgumentException("Settore non valido");
+        }
+        this.settore = settore;
     }
 
     public void presenta() {

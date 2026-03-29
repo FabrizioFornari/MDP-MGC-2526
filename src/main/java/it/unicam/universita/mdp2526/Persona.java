@@ -6,16 +6,30 @@ public class Persona {
     private String cognome;
 
     public Persona(String nome, String cognome) {
-        this.nome = nome;
-        this.cognome = cognome;
+        setNome(nome);
+        setCognome(cognome);
     }
 
     public String getNome() {
         return nome;
     }
 
+    public void setNome(String nome) {
+        if (nome == null || nome.isBlank()) {
+            throw new IllegalArgumentException("Nome non valido");
+        }
+        this.nome = nome;
+    }
+
     public String getCognome() {
         return cognome;
+    }
+
+    public void setCognome(String cognome) {
+        if (cognome == null || cognome.isBlank()) {
+            throw new IllegalArgumentException("Cognome non valido");
+        }
+        this.cognome = cognome;
     }
 
     public String getNomeCompleto() {

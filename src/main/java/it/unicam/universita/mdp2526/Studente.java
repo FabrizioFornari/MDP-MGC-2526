@@ -6,11 +6,18 @@ public class Studente extends Persona {
 
     public Studente(String nome, String cognome, int matricola) {
         super(nome, cognome);
-        this.matricola = matricola;
+        setMatricola(matricola);
     }
 
     public int getMatricola() {
         return matricola;
+    }
+
+    public void setMatricola(int matricola) {
+        if (matricola <= 0) {
+            throw new IllegalArgumentException("Matricola non valida");
+        }
+        this.matricola = matricola;
     }
 
     public void saluta() {
