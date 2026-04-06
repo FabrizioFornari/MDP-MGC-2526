@@ -2,7 +2,7 @@ package it.unicam.universita.mdp2526;
 
 import java.util.Random;
 
-public class Professore extends Persona {
+public class Professore extends Persona implements Valutatore {
 
     private String settore;
     private static final Random random = new Random();
@@ -23,6 +23,7 @@ public class Professore extends Persona {
         this.settore = settore;
     }
 
+    @Override
     public int assegnaVoto(Studente studente) {
         if (studente == null) {
             throw new IllegalArgumentException("Studente non valido");

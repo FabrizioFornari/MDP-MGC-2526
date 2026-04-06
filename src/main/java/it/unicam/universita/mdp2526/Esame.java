@@ -3,11 +3,11 @@ package it.unicam.universita.mdp2526;
 public class Esame {
 
     private String nome;
-    private Professore professore;
+    private Valutatore valutatore;
 
-    public Esame(String nome, Professore professore) {
+    public Esame(String nome, Valutatore valutatore) {
         setNome(nome);
-        setProfessore(professore);
+        setValutatore(valutatore);
     }
 
     public String getNome() {
@@ -21,15 +21,15 @@ public class Esame {
         this.nome = nome;
     }
 
-    public Professore getProfessore() {
-        return professore;
+    public Valutatore getValutatore() {
+        return valutatore;
     }
 
-    public void setProfessore(Professore professore) {
-        if (professore == null) {
-            throw new IllegalArgumentException("Professore non valido");
+    public void setValutatore(Valutatore valutatore) {
+        if (valutatore == null) {
+            throw new IllegalArgumentException("Valutatore non valido");
         }
-        this.professore = professore;
+        this.valutatore = valutatore;
     }
 
     public void sostieniEsame(Studente studente) {
@@ -37,15 +37,11 @@ public class Esame {
             throw new IllegalArgumentException("Studente non valido");
         }
 
-        int voto = professore.assegnaVoto(studente);
+        int voto = valutatore.assegnaVoto(studente);
+        String votoString = (voto == 31) ? "30 e lode" : String.valueOf(voto);
 
         System.out.println("Esame di " + nome);
         System.out.println("Studente: " + studente.getNomeCompleto());
-        System.out.println("Professore: " + professore.getNomeCompleto());
-
-        String votoString = (voto == 31) ? "30 e lode" : String.valueOf(voto);
-
         System.out.println("Voto assegnato: " + votoString);
-
     }
 }
