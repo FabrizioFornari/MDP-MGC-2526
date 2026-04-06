@@ -22,5 +22,9 @@ public class Main {
 
         System.out.println("Nome completo studente 1: " + s1.getNomeCompleto());
         System.out.println("Nome completo professore: " + p1.getNomeCompleto());
+
+        Esame esame = new Esame("Esame di Programmazione", p1);
+        esame.sostieniEsame(s1);
+
     }
 }

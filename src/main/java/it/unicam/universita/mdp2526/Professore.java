@@ -1,8 +1,11 @@
 package it.unicam.universita.mdp2526;
 
+import java.util.Random;
+
 public class Professore extends Persona {
 
     private String settore;
+    private static final Random random = new Random();
 
     public Professore(String nome, String cognome, String settore) {
         super(nome, cognome);
@@ -18,6 +21,16 @@ public class Professore extends Persona {
             throw new IllegalArgumentException("Settore non valido");
         }
         this.settore = settore;
+    }
+
+    public int assegnaVoto(Studente studente) {
+        if (studente == null) {
+            throw new IllegalArgumentException("Studente non valido");
+        }
+
+        int voto = random.nextInt(32); // 0–31
+
+        return voto;
     }
 
     public void presenta() {
