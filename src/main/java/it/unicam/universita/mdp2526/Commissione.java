@@ -5,20 +5,20 @@ import java.util.List;
 
 public class Commissione implements Valutatore {
 
-    private List<Professore> membri;
+    private List<Valutatore> membri;
 
     public Commissione() {
         this.membri = new ArrayList<>();
     }
 
-    public void aggiungiMembro(Professore professore) {
-        if (professore == null) {
-            throw new IllegalArgumentException("Professore non valido");
+    public void aggiungiMembro(Valutatore valutatore) {
+        if (valutatore == null) {
+            throw new IllegalArgumentException("Valutatore non valido");
         }
-        membri.add(professore);
+        membri.add(valutatore);
     }
 
-    public List<Professore> getMembri() {
+    public List<Valutatore> getMembri() {
         return membri;
     }
 
@@ -34,9 +34,8 @@ public class Commissione implements Valutatore {
 
         int somma = 0;
 
-        for (Professore professore : membri) {
-            int voto = professore.assegnaVoto(studente);
-            System.out.println(professore.getNomeCompleto() + " propone: " + voto);
+        for (Valutatore v : membri) {
+            int voto = v.assegnaVoto(studente);
             somma += voto;
         }
 
