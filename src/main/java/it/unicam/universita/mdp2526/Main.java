@@ -26,5 +26,13 @@ public class Main {
         Esame esame = new Esame("Esame di Programmazione", p1);
         esame.sostieniEsame(s1);
 
+        Commissione commissione = new Commissione();
+
+        commissione.aggiungiMembro(p1);
+        commissione.aggiungiMembro(new Professore("Mario", "Verdi", "Programmazione"));
+
+        Esame secondo_esame = new Esame("Esame con commissione", commissione);
+        secondo_esame.sostieniEsame(s1);
+
     }
 }
