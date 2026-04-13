@@ -15,8 +15,8 @@ public class Main {
         s2.saluta();
         p1.presenta();
 
-        corso.iscriviStudente(s1);
-        corso.iscriviStudente(s2);
+//        corso.iscriviStudente(s1);
+//        corso.iscriviStudente(s2);
 
         corso.stampaIscritti();
 
@@ -33,6 +33,17 @@ public class Main {
 
         Esame secondo_esame = new Esame("Esame con commissione", commissione);
         secondo_esame.sostieniEsame(s1);
+
+        corso.iscriviStudente(s1);
+        corso.iscriviStudente(s1);
+
+        corso.stampaIscritti();
+
+        Studente s3 = new Studente("Marco", "Verdi", 1002);
+        Studente s4 = new Studente("Marco", "Verdi", 1002);
+
+        System.out.println(s3==s4);
+        System.out.println(s3.equals(s4));
 
     }
 }
