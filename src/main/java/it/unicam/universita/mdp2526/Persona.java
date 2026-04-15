@@ -35,4 +35,6 @@ public abstract class Persona {
     public String getNomeCompleto() {
         return nome + " " + cognome;
     }
+
+    public abstract void presentati();
 }

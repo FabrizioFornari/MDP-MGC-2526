@@ -9,41 +9,9 @@ public class Main {
 
         Professore p1 = new Professore("Luca", "Bianchi", "Programmazione");
 
-        Corso corso = new Corso("Metodologie di Programmazione", p1);
+        s1.presentati();
+        p1.presentati();
 
-        s1.saluta();
-        s2.saluta();
-        p1.presenta();
-
-//        corso.iscriviStudente(s1);
-//        corso.iscriviStudente(s2);
-
-        corso.stampaIscritti();
-
-        System.out.println("Nome completo studente 1: " + s1.getNomeCompleto());
-        System.out.println("Nome completo professore: " + p1.getNomeCompleto());
-
-        Esame esame = new Esame("Esame di Programmazione", p1);
-        esame.sostieniEsame(s1);
-
-        Commissione commissione = new Commissione();
-
-        commissione.aggiungiMembro(p1);
-        commissione.aggiungiMembro(new Professore("Mario", "Verdi", "Programmazione"));
-
-        Esame secondo_esame = new Esame("Esame con commissione", commissione);
-        secondo_esame.sostieniEsame(s1);
-
-        corso.iscriviStudente(s1);
-        corso.iscriviStudente(s1);
-
-        corso.stampaIscritti();
-
-        Studente s3 = new Studente("Marco", "Verdi", 1002);
-        Studente s4 = new Studente("Marco", "Verdi", 1002);
-
-        System.out.println(s3==s4);
-        System.out.println(s3.equals(s4));
 
     }
 }
