@@ -1,35 +1,41 @@
 package it.unicam.universita.mdp2526;
 
-public class Professore {
+import java.util.Random;
 
-    private String nome;
-    private String cognome;
+public class Professore extends Persona implements Valutatore {
+
     private String settore;
+    private static final Random random = new Random();
 
     public Professore(String nome, String cognome, String settore) {
-        this.nome = nome;
-        this.cognome = cognome;
-        this.settore = settore;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public String getCognome() {
-        return cognome;
+        super(nome, cognome);
+        setSettore(settore);
     }
 
     public String getSettore() {
         return settore;
     }
 
-    public String getNomeCompleto() {
-        return nome + " " + cognome;
+    public void setSettore(String settore) {
+        if (settore == null || settore.isBlank()) {
+            throw new IllegalArgumentException("Settore non valido");
+        }
+        this.settore = settore;
+    }
+
+    @Override
+    public int assegnaVoto(Studente studente) {
+        if (studente == null) {
+            throw new IllegalArgumentException("Studente non valido");
+        }
+
+        int voto = random.nextInt(32); // 0–31
+
+        return voto;
     }
 
     public void presenta() {
-        System.out.println("Sono il professore " + getNomeCompleto()
-                + ", settore " + settore);
+        System.out.println("Sono il professore " + getNomeCompleto() +
+                " del settore " + settore);
     }
 }
