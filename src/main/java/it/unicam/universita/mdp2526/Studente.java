@@ -5,7 +5,7 @@ public class Studente extends Persona {
     private final int matricola;
     private final Libretto libretto;
 
-    public Studente(String nome, String cognome, int matricola, Libretto libretto) {
+    public Studente(String nome, String cognome, int matricola) {
         super(nome, cognome);
 
         if (matricola <= 0) {
@@ -13,7 +13,7 @@ public class Studente extends Persona {
         }
 
         this.matricola = matricola;
-        this.libretto = libretto;
+        this.libretto = new Libretto(this);
     }
 
     public int getMatricola() {
