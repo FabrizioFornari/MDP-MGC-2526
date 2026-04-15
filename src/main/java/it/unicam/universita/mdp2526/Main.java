@@ -10,7 +10,7 @@ public class Main {
 
         Esame esame = new Esame("Metodologie di Programmazione", professore);
 
-        studente.saluta();
+        studente.presentati();
 
         esame.sostieniEsame(studente);
 

@@ -24,7 +24,8 @@ public class Studente extends Persona {
         return libretto;
     }
 
-    public void saluta() {
+    @Override
+    public void presentati() {
         System.out.println("Ciao, sono lo studente " + getNomeCompleto());
     }
 }
