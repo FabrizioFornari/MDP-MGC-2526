@@ -17,5 +17,11 @@ public class Main {
         studente.getLibretto().stampaEsamiSuperati();
         System.out.println("Media: " + studente.getLibretto().calcolaMedia());
 
+        Persona p1 = new Studente("Anna", "Rossi", 1001);
+        Persona p2 = new Professore("Luca", "Bianchi", "Informatica");
+
+        p1.presentati();
+        p2.presentati();
+
     }
 }
