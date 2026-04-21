@@ -23,5 +23,11 @@ public class Main {
         p1.presentati();
         p2.presentati();
 
+
+        Persona p = new Studente("Anna", "Rossi", 1001);
+        System.out.println(p.getNomeCompleto());
+
+
+
     }
 }

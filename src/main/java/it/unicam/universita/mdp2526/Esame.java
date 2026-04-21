@@ -44,7 +44,7 @@ public class Esame {
         System.out.println("Studente: " + studente.getNomeCompleto());
         System.out.println("Voto assegnato: " + votoString);
 
-        if (voto >= 18 || voto == 31) {
+        if ((voto >= 18 && voto <=30) || voto == 31) {
             studente.getLibretto().registraEsameSuperato(this, voto);
             System.out.println("Esame registrato nel libretto.");
         } else {

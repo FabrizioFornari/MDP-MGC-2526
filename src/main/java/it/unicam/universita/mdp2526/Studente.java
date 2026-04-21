@@ -28,4 +28,6 @@ public class Studente extends Persona {
     public void presentati() {
         System.out.println("Ciao, sono lo studente " + getNomeCompleto());
     }
+
+
 }
