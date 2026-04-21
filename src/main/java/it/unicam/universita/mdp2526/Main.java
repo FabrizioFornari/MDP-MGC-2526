@@ -27,7 +27,7 @@ public class Main {
         Persona p = new Studente("Anna", "Rossi", 1001);
         System.out.println(p.getNomeCompleto());
 
-
+        studente.getNomeCompleto();
 
     }
 }
