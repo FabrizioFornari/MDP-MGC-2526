@@ -36,7 +36,8 @@ public class Professore extends Persona implements Valutatore {
 
     @Override
     public void presentati() {
-        System.out.println("Sono il professore " + getNomeCompleto() +
-                " del settore " + settore);
+        System.out.println("Sono il professore " + getNomeCompleto()
+                + " del settore " + settore);
     }
+
 }
